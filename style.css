@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'NanumHuman', sans-serif;
+
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.wrapper {
+    background-color: #f1f1f1;
+}
+
+main {
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.tossface {
+    font-family: Tossface;
+}
+
+.content {
+    padding: 24px 48px;
+    /*height: 100%;*/
+}
+
+#cover {
+    background: url("./cover.jpg") no-repeat center;
+    background-size: cover;
+    height: 932px;
+    position: relative;
+}
+
+#invitation{
+    text-align: center;
+    letter-spacing: 8px;
+}
+
+.cover-headline h1 {
+    font-size: 48px;
+    font-family: 'NanumMyeongjo', serif;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.cover-headline{
+    margin-bottom: 40px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cover-headline p{
+    text-align: center;
+    line-height: 1.5;
+}
+
+.cover-body{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.label{
+    width: fit-content;
+    padding: 6px 14px;
+    color: #fff;
+    border-radius: 999px;
+    background-color: darkblue;
+    font-size: 14px;
+}
+
+.cover-body{
+    width: 100%;
+}
+
+.cover-body-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.label-body{
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+    font-family: 'NanumHumanlight', sans-serif;
+}
+
+.label-body span{
+    font-weight: 700;
+    font-size: inherit;
+}
+
+.main-body li {
+    /*list-style: none;*/
+    margin-bottom: 24px;
+}
+
+.main-body li p{
+    font-family: 'NanumHumanlight', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 4px;
+}
+
+.main-body li p.signature{
+    text-align: right;
+    margin-top: 24px;
+    font-size: 16px;
+}
+
+.host{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.footer{
+    background-color: #f1f1f1;
+    padding: 24px;
+}
