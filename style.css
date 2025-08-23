@@ -6,8 +6,7 @@
 }
 
 
-
-img{
+img {
     object-fit: cover;
     width: 100%;
 }
@@ -35,48 +34,58 @@ main {
 }
 
 #cover {
-    background: url("./cover.jpg") no-repeat center;
-    background-size: cover;
+    background: url("./cover-2.png") no-repeat top;
+    background-size: contain;
     height: 932px;
     position: relative;
 }
 
-#invitation{
+#invitation {
     text-align: center;
     letter-spacing: 8px;
+    background-color: #fff;
+    width: fit-content;
+    margin: auto;
 }
 
 .cover-headline h1 {
     font-size: 40px;
     font-family: 'NanumMyeongjo', serif;
     text-align: center;
-    margin-bottom: 16px;
+    /*margin-bottom: 16px;*/
+    line-height: 1.3;
+    background-color: #fff;
+    width: fit-content;
+    margin: auto;
+    padding: 0 8px;
+    border-radius: 4px;
 }
 
-.cover-headline{
+.cover-headline {
     margin-bottom: 40px;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
 }
 
-.cover-headline p{
+.cover-headline p {
     text-align: center;
     line-height: 1.5;
 }
 
-.cover-body{
+.cover-body {
     display: flex;
     flex-direction: column;
     gap: 16px;
     position: absolute;
-    bottom: 10%;
+    bottom: 18%;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.label{
+.label {
     width: fit-content;
     padding: 6px 14px;
     color: #fff;
@@ -85,11 +94,11 @@ main {
     font-size: 14px;
 }
 
-.cover-body{
+.cover-body {
     width: 100%;
 }
 
-.cover-body-item{
+.cover-body-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,14 +106,27 @@ main {
     gap: 4px;
 }
 
-.label-body{
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 8px;
+}
+
+.img-grid img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.label-body {
     font-size: 18px;
     text-align: center;
     line-height: 1.5;
     font-family: 'NanumHumanlight', sans-serif;
 }
 
-.label-body span{
+.label-body span {
     font-weight: 700;
     font-size: inherit;
 }
@@ -114,31 +136,127 @@ main {
     margin-bottom: 24px;
 }
 
-.main-body li p{
+.main-body li p {
     font-family: 'NanumHumanlight', sans-serif;
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 4px;
 }
 
-.main-body li p.signature{
+.main-body li p.signature {
     text-align: right;
     margin-top: 24px;
     font-size: 16px;
 }
 
-.host{
+.host {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 8px;
 }
-.footer{
-    background-color: #f1f1f1;
+
+.footer {
+    background-color: #f9f9f9;
     padding: 32px 24px;
 }
 
-.footer p:last-child{
+.footer p:last-child {
     font-size: 20px;
+}
+
+#map img {
+    grid-column: 1 / 3;
+}
+
+.info {
+    padding: 32px 24px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #a1a1a1;
+}
+
+#church-image {
+    margin-bottom: 16px;
+    padding-top: 24px;
+}
+
+.address {
+    margin-bottom: 16px;
+}
+
+.address h3 {
+    margin-bottom: 8px;
+}
+
+.address ul li {
+    font-family: 'NanumHumanlight', sans-serif;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+
+#transfer div{
+    display: flex;
+    gap: 16px;
+}
+
+#transfer ul li {
+    /*margin-left: 20px;*/
+    list-style: none;
+}
+
+#transfer-bus {
+    margin-bottom: 16px;
+}
+
+#transfer ul li p {
+    font-family: 'NanumHumanlight', sans-serif;
+    line-height: 1.5;
+}
+
+#transfer ul li h3{
+    margin-bottom: 8px;
+}
+
+#support h3 {
+    margin-bottom: 16px;
+}
+
+#support ul li {
+    font-family: 'NanumHumanlight', sans-serif;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+#support ul li:first-child{
+    list-style: none;
+    margin-left: 0;
+}
+
+#desc h3{
+    margin-bottom: 8px;
+}
+
+#desc p {
+    font-family: 'NanumHumanlight', sans-serif;
+    line-height: 1.5;
+}
+
+#promotion div {
+    margin-bottom: 24px;
+}
+
+#promotion div h3{
+    margin-bottom: 8px;
+}
+
+#promotion div ul li{
+    font-family: 'NanumHumanlight', sans-serif;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.info strong{
+    color: blue;
 }
