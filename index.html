@@ -244,5 +244,57 @@
         </footer>
     </main>
 </div>
+
+<!-- Lightbox Modal (single instance) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="이미지 확대보기" hidden>
+  <button class="lightbox__backdrop" aria-label="닫기(배경)" data-close></button>
+  <div class="lightbox__dialog" tabindex="-1">
+    <img class="lightbox__img" id="lightbox-img" alt="">
+    <button class="lightbox__close" type="button" data-close aria-label="닫기">닫기</button>
+  </div>
+</div>
+
+<script>
+(() => {
+  const overlay = document.getElementById('lightbox');
+  const dialog  = overlay.querySelector('.lightbox__dialog');
+  const img     = document.getElementById('lightbox-img');
+  let lastFocused = null;
+
+  // Delegate clicks from any .img-grid img
+  document.addEventListener('click', (e) => {
+    const clickedImg = e.target.closest('.img-grid img');
+    if (!clickedImg) return;
+    e.preventDefault();
+    openLightbox(clickedImg.getAttribute('src'), clickedImg.getAttribute('alt') || '');
+  });
+
+  // Close on backdrop or close button
+  overlay.addEventListener('click', (e) => {
+    if (e.target.matches('[data-close]')) closeLightbox();
+  });
+
+  // ESC key to close
+  document.addEventListener('keydown', (e) => {
+    if (!overlay.hidden && e.key === 'Escape') closeLightbox();
+  });
+
+  function openLightbox(src, alt) {
+    lastFocused = document.activeElement;
+    img.src = src;
+    img.alt = alt;
+    overlay.hidden = false;
+    document.body.classList.add('modal-open');
+    requestAnimationFrame(() => dialog.focus());
+  }
+
+  function closeLightbox() {
+    overlay.hidden = true;
+    img.removeAttribute('src');
+    document.body.classList.remove('modal-open');
+    if (lastFocused && document.contains(lastFocused)) lastFocused.focus();
+  }
+})();
+</script>
 </body>
 </html>
